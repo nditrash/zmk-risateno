@@ -8,13 +8,20 @@
 
         default_layer {
             bindings = <
-                /* Индексы 0-9 */
+                /* Индексы 0-3: верхний ряд */
                 &kp W          &kp M          &kp V          &kp N
-                &kp LEFT       &kp RIGHT      &none          &none          &none          &none
                 
-                /* Индексы 10-19 */
-                &kp LC(V)      &kp LC(C)      &kp K          &mt LSHFT F11
-                &none          &none          &none          &none          &none          &none
+                /* Индексы 4-7: правая сторона (не используются) */
+                &none          &none          &none          &none
+                
+                /* Индексы 8-11: нижний ряд */
+                &kp LEFT       &kp RIGHT      &kp LC(V)      &kp LC(C)
+                
+                /* Индексы 12-15: правая сторона (не используются) */
+                &none          &none          &none          &none
+                
+                /* Индексы 16-19: большие пальцы + правая сторона */
+                &kp K          &mt LSHFT F11  &none          &none
             >;
         };
     };
@@ -23,43 +30,43 @@
         compatible = "zmk,combos";
         
         bt_clear {
-            key-positions = <0 1>;  // W + M
+            key-positions = <0 1>;  // W + M (верхний ряд)
             bindings = <&bt BT_CLR>;
             timeout-ms = <50>;
         };
         
         bt_next {
-            key-positions = <2 3>;  // V + N
+            key-positions = <2 3>;  // V + N (верхний ряд)
             bindings = <&bt BT_NXT>;
             timeout-ms = <50>;
         };
         
         bt_prev {
-            key-positions = <4 5>;  // LEFT + RIGHT
+            key-positions = <8 9>;  // LEFT + RIGHT (нижний ряд)
             bindings = <&bt BT_PRV>;
             timeout-ms = <50>;
         };
         
         bt_sel_0 {
-            key-positions = <0 4>;  // W + LEFT
+            key-positions = <0 8>;  // W + LEFT (верх + низ)
             bindings = <&bt BT_SEL 0>;
             timeout-ms = <50>;
         };
         
         bt_sel_1 {
-            key-positions = <1 5>;  // M + RIGHT
+            key-positions = <1 9>;  // M + RIGHT (верх + низ)
             bindings = <&bt BT_SEL 1>;
             timeout-ms = <50>;
         };
         
         bt_sel_2 {
-            key-positions = <2 12>; // V + K
+            key-positions = <2 10>; // V + LC(V) (верх + низ)
             bindings = <&bt BT_SEL 2>;
             timeout-ms = <50>;
         };
         
         bt_sel_3 {
-            key-positions = <3 13>; // N + F11
+            key-positions = <3 11>; // N + LC(C) (верх + низ)
             bindings = <&bt BT_SEL 3>;
             timeout-ms = <50>;
         };
