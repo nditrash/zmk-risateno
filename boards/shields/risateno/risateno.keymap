@@ -35,18 +35,6 @@
             timeout-ms = <50>;
         };
         
-        bt_next {
-            key-positions = <2 3>;  // V + N (верхний ряд)
-            bindings = <&bt BT_NXT>;
-            timeout-ms = <50>;
-        };
-        
-        bt_prev {
-            key-positions = <8 9>;  // LEFT + RIGHT (нижний ряд)
-            bindings = <&bt BT_PRV>;
-            timeout-ms = <50>;
-        };
-        
         bt_sel_0 {
             key-positions = <0 8>;  // W + LEFT (верх + низ)
             bindings = <&bt BT_SEL 0>;
@@ -56,18 +44,6 @@
         bt_sel_1 {
             key-positions = <1 9>;  // M + RIGHT (верх + низ)
             bindings = <&bt BT_SEL 1>;
-            timeout-ms = <50>;
-        };
-        
-        bt_sel_2 {
-            key-positions = <2 10>; // V + LC(V) (верх + низ)
-            bindings = <&bt BT_SEL 2>;
-            timeout-ms = <50>;
-        };
-        
-        bt_sel_3 {
-            key-positions = <3 11>; // N + LC(C) (верх + низ)
-            bindings = <&bt BT_SEL 3>;
             timeout-ms = <50>;
         };
     };
