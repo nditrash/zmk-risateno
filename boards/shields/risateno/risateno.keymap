@@ -9,19 +9,19 @@
         default_layer {
             bindings = <
                 /* Индексы 0-3: верхний ряд */
-                &kp W          &kp M          &kp V          &kp N
+                &kp W           &kp M          &kp V          &kp N
                 
                 /* Индексы 4-7: правая сторона (не используются) */
-                &none          &none          &none          &none
+                &none           &none          &none          &none
                 
                 /* Индексы 8-11: нижний ряд */
-                &kp LEFT       &kp RIGHT      &kp LC(V)      &kp LC(C)
+                &mt LSHIFT F11  &kp K          &kp LC(C)      &kp LC(V)
                 
                 /* Индексы 12-15: правая сторона (не используются) */
-                &none          &none          &none          &none
+                &none           &none          &none          &none
                 
                 /* Индексы 16-19: большие пальцы + правая сторона */
-                &kp K          &mt LSHFT F11  &none          &none
+                &kp LEFT        &kp RIGHT      &none          &none
             >;
         };
     };
@@ -30,20 +30,8 @@
         compatible = "zmk,combos";
         
         bt_clear {
-            key-positions = <0 1>;  // W + M (верхний ряд)
+            key-positions = <0 11>;  // W + M (верхний ряд)
             bindings = <&bt BT_CLR>;
-            timeout-ms = <50>;
-        };
-        
-        bt_sel_0 {
-            key-positions = <0 8>;  // W + LEFT (верх + низ)
-            bindings = <&bt BT_SEL 0>;
-            timeout-ms = <50>;
-        };
-        
-        bt_sel_1 {
-            key-positions = <1 9>;  // M + RIGHT (верх + низ)
-            bindings = <&bt BT_SEL 1>;
             timeout-ms = <50>;
         };
     };
