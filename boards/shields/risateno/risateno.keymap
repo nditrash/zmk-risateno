@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
         
         bt_clear {
-            key-positions = <0 11>;  // W + M (верхний ряд)
+            key-positions = <0 11>;  // W + LC(V)
             bindings = <&bt BT_CLR>;
             timeout-ms = <50>;
         };
